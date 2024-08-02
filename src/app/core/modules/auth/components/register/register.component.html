@@ -1,0 +1,104 @@
+<section id="login" class="login">
+    <div class="container-fluid">
+        <div class="row">
+           
+            <div class="col-md-6">
+                <div class="logo pt-3 ps-4">
+                    <h2><span class="color-text">Games</span>X.</h2>
+                </div>
+                <div class="auth-card py-5 px-5 mt-2 ms-5 ps-5">
+                    <div class="content-text">
+                        <h2 class="mb-2">Sign up</h2>
+                        <p >If you have an account <br>
+                            You can <a routerLink="/auth/login" class="fw-bolder link">Login here !</a></p>
+                    </div>
+                    <form class="mt-3" [formGroup]="registerForm" (ngSubmit)="onSubmit(registerForm)">
+                        <div>
+                            <div class="row ">
+                                <div class="col-md-6">
+                                 <label class="text-white fw-bold pb-2">UserName</label>
+                                 <div class="input-group mb-1 w-100">
+                                   <!-- <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-address-card text-white"></i></span> -->
+                                   <input type="text" class="form-control" formControlName="userName" placeholder="Type your Name">
+                                   <div *ngIf="registerForm.controls['userName'].errors&&registerForm.controls['userName'].touched" class="w-100">
+                                    <p class="text-error text-danger" *ngIf="registerForm.controls['userName'].errors['required']"> name is required</p>
+                                    <p class="text-error text-danger" *ngIf="registerForm.controls['userName'].errors['first_name']"> name should be maxLength is 10</p>
+                                  </div>
+                                  
+                                
+                                 </div>
+                                </div>
+                                <div class="col-md-6">
+                                 <label class="text-white fw-bold pb-2">Country</label>
+                                 <div class="input-group mb-1 w-100">
+                                   <!-- <span class="input-group-text" id="basic-addon1"></span> -->
+                                   <input type="text" class="form-control"formControlName="country" placeholder="Enter your Country">
+                                   <div *ngIf="registerForm.controls['country'].errors&&registerForm.controls['email'].touched" class="w-100">
+                                    <p class="text-error text-danger" *ngIf="registerForm.controls['country'].errors['required']">country is required</p>
+                                   
+                                  </div>
+                                 
+                                 </div>
+                                </div>
+                             </div>
+                           
+                           
+                           </div>
+                     
+                      
+                        <div class="mt-3">
+                         <label class="pb-2 fw-bold">E-mail</label>
+                         <input class="form-control" formControlName="email" matInput placeholder="Enter your E-mail" required >
+                         <div *ngIf="registerForm.controls['email'].errors&&registerForm.controls['email'].touched" class="w-100">
+                            <p class="text-error text-danger" *ngIf="registerForm.controls['email'].errors['required']">email is required</p>
+                           
+                          </div>
+                        </div>
+                       
+                           <div class="mt-3">
+                            <label class="pb-2 fw-bold">Phone number</label>
+                            <input class="form-control" formControlName="phoneNumber" matInput placeholder="Enter your Phone number " required >
+                            <div *ngIf="registerForm.controls['phoneNumber'].errors&&registerForm.controls['phoneNumber'].touched" class="w-100">
+                                <p class="text-error text-danger" *ngIf="registerForm.controls['phoneNumber'].errors['required']">phoneNumber is required</p>
+                               
+                              </div>
+                           </div>
+                        <div class="mt-3">
+                         <label class="pb-2 fw-bold">Password</label>
+                         <input class="form-control" formControlName="password" matInput placeholder="Enter your Password" required >
+                        </div>
+                        <div *ngIf="registerForm.controls['password']?.errors && registerForm.controls['password']?.touched"
+                        class="w-100 ">
+                        <p class="text-error text-danger" *ngIf="registerForm.controls['password']?.errors?.['required']">
+                          Password is required</p>
+                        <p class="text-error text-danger" *ngIf="registerForm.controls['password']?.errors?.['pattern']">
+                          Password must be contain special character</p>
+                        </div>
+                        <div class="mt-3">
+                            <label class="pb-2 fw-bold">Confirm Password</label>
+                            <input class="form-control" formControlName="confirmPassword" matInput placeholder="Enter your confirmPassword" required >
+                           </div>
+                           <div *ngIf="registerForm.controls['confirmPassword']?.errors && registerForm.controls['confirmPassword']?.touched"
+                           class="w-100 ">
+                           <p class="text-error text-danger" *ngIf="registerForm.controls['confirmPassword']?.errors?.['required']">
+                             Password is required</p>
+                           <p class="text-error text-danger" *ngIf="registerForm.controls['confirmPassword']?.errors?.['pattern']">
+                             Password must be contain special character</p>
+                           </div>
+                        <button  class="w-100  text-white  rounded-2 mt-3 p-2">Sign up</button>
+                        <div class=" d-flex justify-content-end mt-1">
+                            <a class="fw-bold link" routerLink="/auth/verify-account">Have code?</a>
+                           </div>
+                      
+                     </form>
+                </div>
+        
+            </div>
+            <div class="col-md-6">
+                <div class="pic">
+                    <img src="../../../../../../assets/images/authPic.jpeg" class=" py-5 pic-auth">
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>

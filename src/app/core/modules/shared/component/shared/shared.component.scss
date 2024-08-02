@@ -1,0 +1,29 @@
+.backGround{
+    background-image: url(../../../../../../assets/images/pic3.jpeg);
+   
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+.layer{
+    background-color: #0f0e17c3;
+    height: 100vh;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.content{
+    font-size: 20px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif !important;
+}
+.logo{
+    color:#7f5af0;
+    font-size: 65px !important;
+    .logo-child{
+        color: white;
+    }
+  
+}
+.text{
+    color: rgb(154, 154, 154) !important;
+}

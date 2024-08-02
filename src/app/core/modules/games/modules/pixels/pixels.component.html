@@ -1,0 +1,45 @@
+<section class="">
+  <div class="backGround">
+      <div class="layer d-flex align-items-center justify-content-between">
+          <div class="content col-5 p-4">
+              <h1 class="text-white">WELCOME TO <span class="logo">Games<span class="logo-child">X.</span></span></h1>
+              <p class="text text-white">Your ultimate destination for all things gaming! Whether you're a casual player looking for a
+                  fun way to pass the time or a hardcore gamer seeking
+                  the latest and greatest in video games, we’ve got you covered.</p>
+          </div>
+          <!-- <div class="content-two col-5">
+              Are you a passionate gamer looking for the best free games? Look no further!
+              GameHub is your one-stop destination for a vast selection of free games across various genres and platforms.
+              Whether you're into action-packed adventures, strategic puzzles, or immersive RPGs,
+               we've got something for everyone.
+               we pride ourselves on curating a diverse range of high-quality games to keep you entertained.
+                Our user-friendly interface and detailed game descriptions make it easy to find exactly what you're looking for.
+                Plus, with our regularly updated library, there's always something new to discover.
+
+          </div> -->
+      </div>
+  </div>
+  <div class=""></div>
+</section>
+<section id="pixel" class="">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mt-3 mb-3" *ngFor="let item of tableOfPixelsData">
+          <!-- <a [href]="item.game_url" target="_blank" class="text-decoration-none text-reset"> -->
+            <a class="link" [routerLink]="['details',item.id]">
+          <div class="card shadow p-3 h-100 text-white">
+            <img [src]="item.thumbnail" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title d-flex justify-content-between">{{item.title}}<span class="bg-primary text-white">Free</span></h5>
+              <p class="card-text">{{item.short_description}}</p>
+              <div class="d-flex justify-content-between">
+                <span class="bg-gray">{{item.genre}}</span>
+                <span class="bg-gray">{{item.platform}}</span>
+              </div>
+            </div>
+          </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
