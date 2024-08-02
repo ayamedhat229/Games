@@ -1,6 +1,6 @@
 [build]
  command = "ng build"
- publish = "dist/Games"
+ publish = "dist/gamess-app"
 [[redirects]]
  from = "/*"
  to = "/index.html"
