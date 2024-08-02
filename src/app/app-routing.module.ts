@@ -8,7 +8,7 @@ const routes: Routes = [{path:"",redirectTo:'auth',pathMatch:"full"}
    { path: 'games',canActivate:[AuthGuard], loadChildren: () => import('./core/modules/games/games.module').then(m => m.GamesModule) }];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes,{useHash:true})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
