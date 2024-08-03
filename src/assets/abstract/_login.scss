@@ -1,27 +1,34 @@
-.login{
-    background-color: #0C1422!important;
-    color:white
+.login {
+    background-color: #0C1422 !important;
+    color: white;
+    width: 100%;
 }
-img{
-    width: 750px;
-    height: 100vh;
-    
+img {
+    width: 100%;
+    height: auto;
 }
-.color-text{
-    color:#7f5af0;
+.color-text {
+    color: #7f5af0;
 }
-.color-background{
-    background-color:#0A121F;
+.color-background {
+    background-color: #0A121F;
 }
- .link {
-    text-decoration:none !important;
-    color:#7f5af0 !important;
+.link {
+    text-decoration: none !important;
+    color: #7f5af0 !important;
     cursor: pointer;
 }
-button{
+button {
     background-color: #7f5af0;
     border: solid #7f5af0;
 }
-.content-text{
+.content-text {
     font-size: 20px;
+}
+
+@media (max-width: 767px) {
+    .auth-card {
+        padding: 2rem 1rem;
+        margin: 2rem 1rem;
+    }
 }

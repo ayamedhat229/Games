@@ -1,34 +1,104 @@
-#details{
-    background-color:  #0C1422!important;
-    height: 100vh;
-    color:white;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    .header{
-        font-size: 30px;
-        color: rgb(160, 160, 160);
+#details {
+    background-color: #0C1422 !important;
+    min-height: 100vh;
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+  
+  #details .header {
+    font-size: 30px;
+    color: rgb(160, 160, 160);
+  }
+  
+  #details i {
+    cursor: pointer;
+  }
+  
+  #details .bg-info {
+    color: white;
+    font-size: 14px;
+    border-radius: 10px;
+    padding: 5px 10px;
+    background-color: #7F5AF0 !important;
+  }
+  
+  #details .btn-main {
+    background-color: #0C1422;
+    border-radius: 8px;
+    border: solid #7F5AF0 1px;
+    padding: 10px 20px;
+    color: #7F5AF0;
+    font-size: 18px;
+  }
+  
+  #details .btn-main:hover {
+    color: white;
+    background-color: #7F5AF0;
+    border: solid #7F5AF0 1px;
+    font-size: 18px;
+  }
+  
+  @media (max-width: 768px) {
+    #details .header {
+      font-size: 24px;
     }
-    i{
-        cursor: pointer;
+    #details .bg-info {
+      font-size: 12px;
+      padding: 3px 8px;
     }
-    .bg-info{
-        color:white;
-        font-size: 14px;
-        border-radius: 10px;
-        padding: 5px 5px;
-        background-color: #7F5AF0 !important;
+    #details .btn-main {
+      font-size: 16px;
+      padding: 8px 16px;
     }
-    .btn-main{
-        background-color:#0C1422;
+  }
+  
+  @media (max-width: 576px) {
+    #details .header {
+      font-size: 20px;
+    }
+    #details .bg-info {
+      font-size: 10px;
+      padding: 2px 6px;
+    }
+    #details .btn-main {
+      font-size: 14px;
+      padding: 6px 12px;
+    }
+    #details .row {
+      flex-direction: column;
+    }
+    .btn-main {
+        background-color: #0C1422;
         border-radius: 8px;
         border: solid #7F5AF0 1px;
-        padding: 10px 10px;
-        color:#7F5AF0;
+        padding: 10px 20px;
+        color: #7F5AF0;
         font-size: 18px;
-    }
-    .btn-main:hover{
+        display: inline-block;
+        text-align: center;
+        transition: background-color 0.3s, color 0.3s;
+      }
+      
+      .btn-main:hover {
         color: white;
         background-color: #7F5AF0;
         border: solid #7F5AF0 1px;
         font-size: 18px;
-    }
-}
+      }
+      
+      @media (max-width: 768px) {
+        .btn-main {
+          font-size: 16px;
+          padding: 8px 16px;
+        }
+      }
+      
+      @media (max-width: 576px) {
+        .btn-main {
+          font-size: 14px;
+          padding: 6px 12px;
+        }
+      }
+      
+  }
+  

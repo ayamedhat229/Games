@@ -1,25 +1,22 @@
 <section id="details">
     <div class="container">
-        <div class="d-flex justify-content-between p-1 pb-4 pt-3 header">
-            <span>Details Game</span>
-            <span><i class="fa-solid fa-xmark"[routerLink]="['/games/home']"></i></span>
+      <div class="d-flex justify-content-between p-1 pb-4 pt-3 header">
+        <span>Details Game</span>
+        <span><i class="fa-solid fa-xmark" [routerLink]="['/games/home']"></i></span>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <img class="img-fluid" [src]="itemsDetails.thumbnail" alt="Game Thumbnail">
         </div>
-        <div class="row">
-            <div class="col-md-4">
-                <img class="" [src]="itemsDetails.thumbnail">
-            </div>
-            <div class="col-md-8">
-                <h3 class="pb-2">Title: {{itemsDetails.title}}</h3>
-               
-                <h5><span class="m-2">Category : </span><span class="bg-info m-2">{{itemsDetails.genre}}</span></h5>
-            
-                <h5><span class="m-2">Platform : </span><span class="bg-info m-2 ">{{itemsDetails.platform}}</span></h5>
-             
-             
-                <h5><span class="m-2">Status : </span><span class="bg-info m-2 ">{{itemsDetails.status}}</span></h5>
-                <p class="p-2">{{itemsDetails.description}}</p>
-                <a [href]="itemsDetails.game_url" target="_blank" class="text-decoration-none text-reset m-2 p-2 btn-main">Show Game</a>
-            </div>
+        <div class="col-md-8">
+          <h3 class="pb-2">Title: {{itemsDetails.title}}</h3>
+          <h5><span class="m-2">Category: </span><span class="bg-info m-2">{{itemsDetails.genre}}</span></h5>
+          <h5><span class="m-2">Platform: </span><span class="bg-info m-2">{{itemsDetails.platform}}</span></h5>
+          <h5><span class="m-2">Status: </span><span class="bg-info m-2">{{itemsDetails.status}}</span></h5>
+          <p class="p-2">{{itemsDetails.description}}</p>
+          <a [href]="itemsDetails.game_url" target="_blank" class="text-decoration-none text-reset m-2 p-2 btn-main">Show Game</a>
         </div>
+      </div>
     </div>
-</section>
+  </section>
+  
