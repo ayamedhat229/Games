@@ -3,10 +3,10 @@
     color: white;
     width: 100%;
 }
-img {
-    width: 100%;
-    height: auto;
-}
+// img {
+//     width: 100%;
+//     height: 130vh;
+// }
 .color-text {
     color: #7f5af0;
 }
@@ -25,6 +25,25 @@ button {
 .content-text {
     font-size: 20px;
 }
+.pic {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* or any desired height */
+    overflow: hidden;
+  }
+  
+  .pic-auth {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90%;
+    object-fit: cover; /* Ensures the image covers the container while maintaining its aspect ratio */
+    object-position: center; /* Centers the image within the container */
+    display: block; /* Ensures no extra space around the image */
+    border-radius: 50px;
+  }
+  
 
 @media (max-width: 767px) {
     .auth-card {
