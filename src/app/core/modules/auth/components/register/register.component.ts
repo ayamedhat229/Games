@@ -12,7 +12,8 @@ import { MAT_DIALOG_DATA, MatDialog, MatDialogRef } from '@angular/material/dial
   styleUrls: ['./register.component.scss']
 })
 export class RegisterComponent implements OnInit{
-
+  hide:boolean = true;
+  hidden:boolean = true;
   ngOnInit(): void {
     
   }

@@ -65,7 +65,13 @@
                            </div>
                         <div class="mt-3">
                          <label class="pb-2 fw-bold">Password</label>
-                         <input class="form-control" formControlName="password" matInput placeholder="Enter your Password" required >
+                         <div class="password-container">
+                          <input class="form-control" formControlName="password" matInput placeholder="Enter your Password" required [type]="hide ? 'password' : 'text'">
+                          <a class="show-password" (click)="hide = !hide">
+                            <i class="fa-solid icon" [class]="hide ? 'fa-eye-slash' : 'fa-eye'"></i>
+                        </a>
+                         </div>
+                        
                         </div>
                         <div *ngIf="registerForm.controls['password']?.errors && registerForm.controls['password']?.touched"
                         class="w-100 ">
@@ -76,7 +82,12 @@
                         </div>
                         <div class="mt-3">
                             <label class="pb-2 fw-bold">Confirm Password</label>
-                            <input class="form-control" formControlName="confirmPassword" matInput placeholder="Enter your confirmPassword" required >
+                            <div class="password-container">
+                              <input class="form-control" formControlName="confirmPassword" matInput placeholder="Enter your confirmPassword" required [type]="hidden ? 'password' : 'text'">
+                              <a class="show-password" (click)="hidden = !hidden">
+                                <i class="fa-solid icon" [class]="hidden ? 'fa-eye-slash' : 'fa-eye'"></i>
+                            </a>
+                            </div>
                            </div>
                            <div *ngIf="registerForm.controls['confirmPassword']?.errors && registerForm.controls['confirmPassword']?.touched"
                            class="w-100 ">

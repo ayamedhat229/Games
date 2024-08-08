@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { SuperheroRoutingModule } from './superhero-routing.module';
 import { SuperheroComponent } from './superhero.component';
+import { SharedModule } from '../../../shared/shared.module';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { SuperheroComponent } from './superhero.component';
   ],
   imports: [
     CommonModule,
-    SuperheroRoutingModule
+    SuperheroRoutingModule,
+    SharedModule
   ]
 })
 export class SuperheroModule { }

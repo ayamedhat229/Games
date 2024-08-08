@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { ShooterRoutingModule } from './shooter-routing.module';
 import { ShooterComponent } from './shooter.component';
+import { SharedModule } from '../../../shared/shared.module';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { ShooterComponent } from './shooter.component';
   ],
   imports: [
     CommonModule,
-    ShooterRoutingModule
+    ShooterRoutingModule,
+    SharedModule
   ]
 })
 export class ShooterModule { }

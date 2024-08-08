@@ -8,6 +8,7 @@ import { ShooterService } from '../../../services/shooter-service/shooter.servic
 export class ShooterComponent implements OnInit{
   constructor(private _ShooterService:ShooterService){}
   tableOfShooter:any;
+  SearchKey : string =''
   ngOnInit(): void {
     this.getAllShooterData()
   }

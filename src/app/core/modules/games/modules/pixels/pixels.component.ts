@@ -8,6 +8,7 @@ import { PixelService } from '../../../services/pixels-service/pixel.service';
 export class PixelsComponent implements OnInit{
   constructor(private _PixelService:PixelService){}
   tableOfPixelsData:any[]=[]
+  SearchKey:string = ''
   ngOnInit(): void {
    this.getDataOfPixel() 
   }

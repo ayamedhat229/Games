@@ -7,7 +7,8 @@ import { SuperheroService } from '../../../services/superhero-service/superhero.
 })
 export class SuperheroComponent implements OnInit {
   constructor(private _SuperheroService:SuperheroService){}
-  tableOfSuperheroData : any[]=[]
+  tableOfSuperheroData : any[]=[];
+  SearchKey : string ='';
   ngOnInit(): void {
     this.getSuperheroData()
   }

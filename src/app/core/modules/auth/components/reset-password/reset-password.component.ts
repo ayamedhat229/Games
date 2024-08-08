@@ -9,6 +9,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./reset-password.component.scss']
 })
 export class ResetPasswordComponent implements OnInit{
+  hide : boolean = true;
+  hidden : boolean = true;
   ngOnInit(): void {
     
   }

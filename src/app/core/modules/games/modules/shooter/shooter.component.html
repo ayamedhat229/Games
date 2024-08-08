@@ -11,9 +11,12 @@
 </section>
 
 <section id="shooter" class="games-section">
+  <div class="searchInput d-flex justify-content-center pt-4 pb-3">
+    <input type="text" [(ngModel)]="SearchKey" (keyup.enter)="getAllShooterData()" class="form-control w-75" placeholder="Search by name" aria-label="Username" aria-describedby="basic-addon1">
+  </div>
   <div class="container">
     <div class="row">
-      <div class="col-lg-4 col-md-6 col-12 mt-3 mb-3" *ngFor="let item of tableOfShooter">
+      <div class="col-lg-4 col-md-6 col-12 mt-3 mb-3" *ngFor="let item of tableOfShooter|search:SearchKey">
         <a class="link" [routerLink]="['details',item.id]">
           <div class="card shadow p-3 h-100 text-white">
             <img [src]="item.thumbnail" class="card-img-top" alt="...">

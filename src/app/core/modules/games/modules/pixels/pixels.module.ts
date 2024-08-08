@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { PixelsRoutingModule } from './pixels-routing.module';
 import { PixelsComponent } from './pixels.component';
+import { SharedModule } from '../../../shared/shared.module';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { PixelsComponent } from './pixels.component';
   ],
   imports: [
     CommonModule,
-    PixelsRoutingModule
+    PixelsRoutingModule,
+    SharedModule
   ]
 })
 export class PixelsModule { }

@@ -6,8 +6,10 @@ import { HomeService } from '../../../services/home-service/home.service';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit{
+
   constructor(private _HomeServices:HomeService){}
   tableOFgames:any[]=[]
+  SearchKey = '';
   imagePath:string='https://www.freetogame.com/';
   ngOnInit(): void {
     this.getAllHomeData()
