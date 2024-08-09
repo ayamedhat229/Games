@@ -68,13 +68,30 @@ button {
 
     .show-password {
         position: absolute;
-        left:96%; /* أبعد الأيقونة عن يمين الـ input بمقدار 30% */
+        left: 96%; /* default for larger screens */
         top: 30%;
         transform: translateY(-50%);
         font-size: 20px;
         cursor: pointer;
     }
 }
+
+/* Adjust for medium-sized screens (e.g., tablets) */
+@media (max-width: 768px) {
+    .auth-card .show-password {
+        left: 94%; /* move closer for smaller screens */
+        font-size: 18px; /* slightly smaller font */
+    }
+}
+
+/* Adjust for small screens (e.g., phones) */
+@media (max-width: 480px) {
+    .auth-card .show-password {
+        left: 90%; /* adjust further for small screens */
+        font-size: 16px; /* smaller font size */
+    }
+}
+
 
 
 
